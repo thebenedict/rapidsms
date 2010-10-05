@@ -15,6 +15,7 @@ available backends, like so:
 """
 
 import urllib2
+import urllib
 import select
 from datetime import datetime
 
@@ -120,7 +121,7 @@ class RapidHttpBacked(BackendBase):
         self.info('Sending message: %s' % message)
         # if you wanted to add timestamp or any other outbound variable, 
         # you could add it to this context dictionary
-        context = {'message':message.text,
+        context = {'message':urllib.quote_plus(message.text),
                    'phone_number':message.connection.identity}
         url = "%s?%s" % (self.gateway_url, self.http_params_outgoing % context)
         try:
