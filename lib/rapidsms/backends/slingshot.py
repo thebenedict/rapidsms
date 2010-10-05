@@ -6,7 +6,7 @@ SlingshotSMS backend for RapidSMS
 
 <<SLINGSHOT URL>>
 
-Based on backends.http in RapidSMS core, with modifications by Michael Benedict and Tom McWright.
+Based on backends.http in RapidSMS core, with modifications by Michael Benedict and Tom MacWright.
 
 To use the SlingshotSMS backend, add to settings.py:
 
